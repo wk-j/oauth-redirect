@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "parcel-build": "node node_modules/parcel-bundler/bin/cli.js web/index.html -d src/GitHub/wwwroot --public-url /"
+        "parcel-build": "node node_modules/parcel-bundler/bin/cli.js web/index.tsx -d src/GitHub/wwwroot --public-url /"
     },
     "repository": {
         "type": "git",
