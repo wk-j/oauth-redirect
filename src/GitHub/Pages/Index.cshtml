@@ -1,12 +1,12 @@
 @page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "GitHub";
 }
 
 @if (!User.Identity.IsAuthenticated)
 {
-    <a asp-action="Login" asp-controller="Account" class="btn btn-default">Log In with GitHub</a>
+    <a asp-action="Login" asp-controller="Account" class="btn btn-default">Log In GitHub</a>
 }
 else
 {

@@ -1,0 +1,27 @@
+{
+    "name": "oauthredirect",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "parcel-build": "node node_modules/parcel-bundler/bin/cli.js web/index.html -d src/GitHub/wwwroot --public-url /"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/wk-j/oauth-redirect.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/wk-j/oauth-redirect/issues"
+    },
+    "homepage": "https://github.com/wk-j/oauth-redirect#readme",
+    "devDependencies": {
+        "@types/react": "^16.8.23",
+        "@types/react-dom": "^16.8.4",
+        "parcel-bundler": "^1.12.3",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "typescript": "^3.5.2"
+    }
+}
