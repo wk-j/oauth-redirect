@@ -1,6 +1,18 @@
+@model GitHub.Controllers.Home.IndexModel
+
 <html>
-    <body>
-        <div id="root"></div>
-        <script src="/index.js"></script>
-    </body>
+
+<head>
+    <title>E-Document Kasetsart University</title>
+    <link rel="shortcut icon" href="/favicon.c4a99a81.ico">
+    <link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="@Model.GetCss()">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="@Model.GetScript()"></script>
+</body>
+
 </html>

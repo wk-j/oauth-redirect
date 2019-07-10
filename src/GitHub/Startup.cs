@@ -14,6 +14,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Logging;
@@ -76,6 +77,10 @@ namespace GitHub {
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env) {
+
+            var asm = typeof(KFontend.KFrontendClass).Assembly;
+            var asmName = asm.GetName().Name;
+
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             } else {
@@ -86,7 +91,10 @@ namespace GitHub {
 
             // app.UseHttpsRedirection();
             app.UseAuthentication();
-            app.UseStaticFiles();
+            app.UseStaticFiles(new StaticFileOptions {
+                FileProvider =
+                    new EmbeddedFileProvider(asm, $"{asmName}.wwwroot")
+            });
             app.UseMvc(routes => {
                 routes.MapRoute(
                     name: "default",
